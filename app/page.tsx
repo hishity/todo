@@ -1,18 +1,15 @@
 "use client"
 
-import Image from "next/image";
 import Todo from "./compornents/todo";
-import useSWR from "swr";
 import { TodoType } from "./types";
 import { useRef } from "react";
-import { useRouter } from "next/router";
 import { useTodos } from "./hooks/useTodos";
 import { API_URL } from "@/constants/url";
 
 export default function Home() {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
-  const {todos,isLoading,error,mutate} = useTodos();
+  const {todos,mutate} = useTodos();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
