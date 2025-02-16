@@ -62,7 +62,7 @@ const Todo = ({todo}: TodoProps) => {
   }
 
   return (
-    <dev>
+    <div>
       <li className="py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -103,7 +103,7 @@ const Todo = ({todo}: TodoProps) => {
           </div>
         </div>
       </li>
-    </dev>
+    </div>
   );
 };
 
