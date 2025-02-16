@@ -42,7 +42,6 @@ const Todo = ({todo}: TodoProps) => {
     })
 
     if(response.ok){
-        const deletedTodo = await response.json();
         const updateTodos = todos.filter((todo: TodoType) => todo.id !== id)
         mutate(updateTodos);
     }
